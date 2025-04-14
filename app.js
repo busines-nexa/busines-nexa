@@ -4,7 +4,7 @@ const baseRequest = {
   apiVersionMinor: 0
 };
  
-const allowedCardNetworks = ["AMEX", "DISCOVER", "INTERAC", "JCB", "MASTERCARD", "VISA"];
+const allowedCardNetworks = ["AMEX", "DISCOVER", "INTERAC", "PHONEPAY", "GOOGLEPAY", "PAYTM"];
  
 const allowedCardAuthMethods = ["PAN_ONLY", "CRYPTOGRAM_3DS"];
  
@@ -12,7 +12,7 @@ const tokenizationSpecification = {
   type: 'PAYMENT_GATEWAY',
   parameters: {
     'gateway': 'example',
-    'gatewayMerchantId': 'exampleGatewayMerchantId'
+    'gatewayMerchantId': 'prashobhpm83@oksbi'
   }
 };
  
@@ -38,16 +38,16 @@ function getGoogleIsReadyToPayRequest() {
       {},
       baseRequest,
       {
-        allowedPaymentMethods: [baseCardPaymentMethod]
+        allowedPaymentMethods: [baseUpiPaymentMethod]
       }
   );
 } 
 function getGooglePaymentDataRequest() {
   const paymentDataRequest = Object.assign({}, baseRequest);
-  paymentDataRequest.allowedPaymentMethods = [cardPaymentMethod];
+  paymentDataRequest.allowedPaymentMethods = [upiPaymentMethod];
   paymentDataRequest.transactionInfo = getGoogleTransactionInfo();
   paymentDataRequest.merchantInfo = {
-     merchantName: 'Example Merchant'
+     merchantName: 'Prashobh pm'
   };
   return paymentDataRequest;
 }
