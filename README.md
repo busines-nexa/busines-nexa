@@ -1,1 +1,1 @@
-_വ᭄ഷു കൈന᭄ട്ട൦  തരꫂൻ  ഉളളവർ ഇത᭄ൽ അയച്ചോ😌_
+Automatically payment system was created by Achu modex
